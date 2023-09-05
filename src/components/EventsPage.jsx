@@ -3,7 +3,7 @@ import CarouselComics from "./CarouselComics";
 import { eventsApiData } from "../api";
 
 export default function EventsPage() {
-	const { isLoading, error, data } = useQuery("eventsData", eventsApiData);
+	const { isLoading, data } = useQuery("eventsData", eventsApiData);
 
 	return (
 		<div className='w-full flex justify-center'>
