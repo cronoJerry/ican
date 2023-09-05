@@ -11,3 +11,9 @@ export async function eventsApiData() {
 		(res) => res.json()
 	);
 }
+export async function comicsDetailApiData({ queryKey }) {
+	const id = queryKey[1];
+	return await fetch(
+		`${BASE_URL}/v1/public/comics/${id}?apikey=${API_KEY}`
+	).then((res) => res.json());
+}
